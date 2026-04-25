@@ -9,6 +9,12 @@ It focuses on the product surface (marketing + console) you would expect from a 
 
 > Note: This repository is a UI-first prototype. Most console data and playground execution are currently mock/demo data.
 
+## Screenshots
+
+![Papagan screenshot 1](./image1.png)
+
+![Papagan screenshot 2](./image2.png)
+
 ## Tech stack
 
 - Next.js (App Router) + TypeScript
