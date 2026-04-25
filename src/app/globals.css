@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 40% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 40% 6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 235 84% 67%;
+    --primary-foreground: 222 47% 4%;
+    --secondary: 222 30% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 235 84% 67%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 25% 14%;
+    --input: 222 25% 14%;
+    --ring: 235 84% 67%;
+    --radius: 0.625rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  ::selection {
+    @apply bg-brand-600/30 text-white;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-white/10;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+}
+
+@layer utilities {
+  .glow {
+    box-shadow: 0 0 40px rgba(99, 112, 241, 0.15), 0 0 80px rgba(99, 112, 241, 0.07);
+  }
+  .glow-sm {
+    box-shadow: 0 0 20px rgba(99, 112, 241, 0.2);
+  }
+  .glass {
+    @apply border border-white/5 bg-white/[0.03] backdrop-blur-sm;
+  }
+  .glass-strong {
+    @apply border border-white/10 bg-white/[0.06] backdrop-blur-md;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent;
+  }
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brand-400 via-brand-300 to-emerald-400 bg-clip-text text-transparent;
+  }
+  .shimmer-bg {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
